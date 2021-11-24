@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        @page{
+            margin: 100px 25px;
+        }
+        header{
+            position: absolute;
+            top: -60px;
+            left: 0px;
+            right: 0px;
+            height: 20px;
+        }
+        .container-table{
+            margin: 80px 0px;
+            width: 100%;
+        }
+        .fixed-footer{
+            width : 100%;
+            position: fixed;
+            bottom: -28;
+            left: 0px;
+            right: 0px;
+            height: 50px;
+            text-align: center;
+        }
+        .fixed-footer-right{
+            position: absolute;
+            bottom: -150px;
+            height: 0px;
+            font-size: 13px;
+            float: right;
+        }
+        .page-number:before {
+        }
+        </style>
+    </head>
+    <script type="text/php">
+        if (isset($pdf)){
+            $text = "Page {PAGE_NUM} / {PAGE_COUNT}";
+            $size = 10;
+            $font = $fontMetrics->getFont("Verdana");
+            $width = $fontMetrics->get_text_width($text, $font, $size) / 2;
+            $x = ($pdf->get_width() - $width) / 2;
+            $y = $pdf->get_height() - 35;
+            $pdf->page_text($x, $y, $text, $font, $size);
+        }
+    </script>
+    <body>
+        <header>
+            <p style="margin:0; position:left;">
+                <img src=' . $this->infosConfig()->logo . ' width="200" height="160"/>
+            </p>
+        </header>
+        <div class="container-table">
+            <h3 align="center">
+                <u>Liste des comptes clients</u>
+            </h3>
+            <table border="2" cellspacing="0" width="100%">
+                <tr>
+                    <th cellspacing="0" border="2" width="30%" align="center">Client</th>
+                    <th cellspacing="0" border="2" width="20%" align="center">Contact</th>
+                    <th cellspacing="0" border="2" width="20%" align="center">Pays</th>
+                    <th cellspacing="0" border="2" width="20%" align="center">E-mail</th>
+                    <th cellspacing="0" border="2" width="20%" align="center">Adresse</th>
+                </tr>
+                <tr>
+                    <td  cellspacing="0" border="2" align="center">' . $data->full_name_client . '</td>
+                    <td  cellspacing="0" border="2" align="center">' . $data->contact_client . '</td>
+                    <td  cellspacing="0" border="2" align="center">' . $data->nation->libelle_nation . '</td>
+                    <td  cellspacing="0" border="2" align="center">' . $data->email_client . '</td>
+                    <td  cellspacing="0" border="2" align="center">' . $data->adresse_client . '</td>
+                </tr>
+            </table>
+            <br/>
+            Nombre totale: <b> ' . number_format($total, 0, ',', ' ') . ' client(s)</b>
+            <div class='fixed-footer'>
+                <div class='page-number'></div>
+            </div>
+            <div class='fixed-footer-right'>
+                <i> Editer le " . date('d-m-Y') . "</i>
+            </div>
+        </div>
+    </body>
+</html>

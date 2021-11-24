@@ -1,0 +1,173 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 17 déc. 2015, 08:12:56
+    Author     : wilfried
+*/
+
+.entete{
+    width: 100%;
+    padding-bottom: 5px;
+    font-family: 'arial, tahoma';
+    font-size: 0.8em;
+    border-bottom: solid 2px #D9D9D9;
+    color: #979797;
+    margin-bottom: 50px;
+}
+
+.titre{
+    width: 100%;
+    font-family: 'arial, tahoma';
+    font-size: 0.8em;
+    border-bottom: 0!important;
+    color: #000!important;
+    margin-bottom: 0!important;
+}
+
+.pied{
+    width: 100%;
+    padding: 5px;
+    font-family: 'arial, tahoma';
+    font-size: 0.8em;
+    border-top: solid 2px #D9D9D9;
+    color: #979797;
+    text-align: center;
+}
+
+.entete div{
+    float: left;
+}
+
+.entete .logo{
+    width: 24%;
+}
+.entete .libelle{
+    width: 45%;
+    text-align: center;
+}
+
+.entete .date{
+    float: right;
+    width: 24%;
+    text-align: right;
+}
+
+.border-style{
+    border: solid 1px #0063dc;
+}
+
+table{
+    font-size: 0.8em;
+    vertical-align: top;
+    margin-bottom: 50px;
+}
+
+table#detailCommande{
+    font-size: 0.8em;
+    margin-top: 50px;
+    vertical-align: top;
+    margin-top: 50px;
+}
+
+#detailCommande thead tr th{
+    text-align: left;
+}
+
+#detailCommande .bord{
+    border: solid 1px;
+    border-bottom: 0;
+}
+
+.block-detail div{
+    border: solid 1px #979797;
+    float: left;
+    padding: 5px;
+}
+
+.block-detail .block-prestation{
+    width: 72%;
+    border-right: 0;
+}
+
+.block-detail .block-montant{
+    width: 22%;
+}
+
+div .noborder-top{
+    border-top: none;
+}
+
+.footer .noborder{
+    border: none;
+    padding-right: 6px;
+}
+
+.text-right{
+    text-align: right;
+}
+.text-left{
+    text-align: left;
+}
+.vertical-align{
+    vertical-align: middle;
+}
+.size-14{
+    font-size: 14px;
+}
+
+.trame-font{
+    background-color: #D9D9D9;
+}
+
+
+.entete-table-print{
+    width: 48%;
+    background-color: transparent;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+.table-print{
+    display: table;
+    width: 100%;
+    background-color: transparent;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+table.table-print thead tr td, table.table-print thead tr th {
+    padding: 8px;
+    line-height: 1.42857143;
+    border: 1px solid #D9D9D9;
+}
+
+table.table-print tbody tr td {
+    border: 1px solid #D9D9D9;
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+}
+table.table-print tfoot tr td {
+    border-top: 1px solid #f4f4f4;
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+}
+
+.border-end{
+    border: #000 solid 1px;
+}
+
+.fond-gris{
+    background-color: #f4f4f4;
+}
+
+.bold{
+    font-weight: bold;
+}
